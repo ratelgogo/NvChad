@@ -4,6 +4,7 @@ local M = {}
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    ["<leader>ax"] = { ": lua require('nvchad.tabufline').closeAllBufs()<CR>"},
   },
   v = {
     [">"] = { ">gv", "indent"},

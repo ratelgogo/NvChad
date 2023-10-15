@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -7,15 +7,15 @@ local plugins = {
 
   {
     "neovim/nvim-lspconfig",
-    dependencies = {
-      -- format & linting
-      {
-        "jose-elias-alvarez/null-ls.nvim",
-        config = function()
-          require "custom.configs.null-ls"
-        end,
-      },
-    },
+    -- dependencies = {
+    --   -- format & linting
+    --   {
+    --     "jose-elias-alvarez/null-ls.nvim",
+    --     config = function()
+    --       require "custom.configs.null-ls"
+    --     end,
+    --   },
+    -- },
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
@@ -25,7 +25,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -59,19 +59,19 @@ local plugins = {
       })
     end,
   },
-{
+  {
     "glepnir/lspsaga.nvim",
     lazy = false,
-    config = function ()
-      return require('custom.configs.lspsaga')
-    end
+    config = function()
+      return require "custom.configs.lspsaga"
+    end,
   },
   {
-    'karb94/neoscroll.nvim',
+    "karb94/neoscroll.nvim",
     lazy = false,
-    config = function ()
-      require('neoscroll').setup()
-    end
+    config = function()
+      require("neoscroll").setup()
+    end,
   },
   {
     "ibhagwan/smartyank.nvim",
@@ -103,6 +103,20 @@ local plugins = {
     lazy = false,
     config = function()
       require("nvim-surround").setup()
+    end,
+  },
+  {
+    "mhartington/formatter.nvim",
+    event = "VeryLazy",
+    opts = function()
+      return require "custom.configs.formatter"
+    end,
+  },
+  {
+    "mfussenegger/nvim-lint",
+    event = "VeryLazy",
+    config = function()
+      require "custom.configs.lint"
     end,
   },
   -- To make a plugin not be loaded
