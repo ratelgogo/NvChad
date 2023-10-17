@@ -60,6 +60,14 @@ local plugins = {
     end,
   },
   {
+    "windwp/nvim-ts-autotag",
+    lazy = false,
+    ft = { "typescriptreact", "tsx", "html" },
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
+  {
     "glepnir/lspsaga.nvim",
     lazy = false,
     config = function()

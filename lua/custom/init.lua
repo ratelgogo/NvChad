@@ -9,6 +9,18 @@
 vim.g.lua_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/snippets/lua"
 vim.g.vscode_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/snippets/vscode"
 
+vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics,
+    {
+        underline = true,
+        virtual_text = {
+            spacing = 5,
+            severity_limit = 'Warning',
+        },
+        update_in_insert = true,
+    }
+)
+
 local neovide_config = function()
   -- vim.opt.guifont = { "JetBrainsMono Nerd Font", ":h15" }
   -- vim.o.guifont = "CodeNewRoman Nerd Font:h15"
