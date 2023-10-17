@@ -10,7 +10,10 @@ vim.g.lua_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/snippets/lua"
 vim.g.vscode_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/snippets/vscode"
 
 local neovide_config = function()
-  vim.opt.guifont = { "JetBrainsMono Nerd Font", ":h16" }
+  -- vim.opt.guifont = { "JetBrainsMono Nerd Font", ":h15" }
+  -- vim.o.guifont = "CodeNewRoman Nerd Font:h15"
+  vim.o.guifont = "FiraCode Nerd Font:h15"
+  -- vim.o.guifont = "Hack Nerd Font:h15"
   vim.g.neovide_refresh_rate = 120
   vim.g.neovide_cursor_vfx_mode = "railgun"
   -- vim.g.neovide_cursor_vfx_mode = "torpedo"
