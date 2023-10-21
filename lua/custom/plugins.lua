@@ -22,6 +22,11 @@ local plugins = {
     end, -- Override to setup mason-lspconfig
   },
 
+  {
+
+    "numToStr/Comment.nvim",
+    opts = overrides.comment
+  },
   -- override plugin configs
   {
     "williamboman/mason.nvim",

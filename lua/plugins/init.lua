@@ -76,6 +76,9 @@ local default_plugins = {
     init = function()
       require("core.utils").lazy_load "nvim-treesitter"
     end,
+   dependencies = {
+      'JoosepAlviste/nvim-ts-context-commentstring',
+    },
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
     build = ":TSUpdate",
     opts = function()
