@@ -4,13 +4,12 @@ local M = {}
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
-    ["<leader>ax"] = { ": lua require('nvchad.tabufline').closeAllBufs()<CR>"},
+    ["<leader>ax"] = { ": lua require('nvchad.tabufline').closeAllBufs()<CR>", "close all bufs" },
   },
   v = {
-    [">"] = { ">gv", "indent"},
+    [">"] = { ">gv", "indent" },
   },
 }
-
 
 -- more keybinds!
 
@@ -37,7 +36,7 @@ M.custom = {
 M.telescope = {
   n = {
     ["<leader>fp"] = { "<cmd> lua require('telescope').extensions.project.project{} <CR>", "list projects" },
-    ["<leader>fd"] = { "<cmd> Telescope diagnostics <CR>", "list diagnostic"}
+    ["<leader>fd"] = { "<cmd> Telescope diagnostics <CR>", "list diagnostic" },
   },
 }
 
