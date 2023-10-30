@@ -25,7 +25,7 @@ local plugins = {
   {
 
     "numToStr/Comment.nvim",
-    opts = overrides.comment
+    opts = overrides.comment,
   },
   -- override plugin configs
   {
@@ -38,6 +38,13 @@ local plugins = {
     opts = overrides.treesitter,
   },
 
+  {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require "custom.configs.treesitter"
+    end,
+  },
   {
     "nvim-tree/nvim-tree.lua",
     opts = overrides.nvimtree,
