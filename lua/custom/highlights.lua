@@ -10,7 +10,6 @@ M.override = {
     italic = true,
   },
 }
-
 ---@type HLTable
 M.add = {
   NvimTreeOpenedFolderName = { fg = "green", bold = true },
