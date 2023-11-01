@@ -37,7 +37,7 @@ M.custom = {
 M.telescope = {
   n = {
     ["<leader>fp"] = { "<cmd> lua require('telescope').extensions.project.project{} <CR>", "list projects" },
-    ["<leader>fd"] = { "<cmd> Telescope diagnostics <CR>", "list diagnostic"}
+    ["<leader>fd"] = { "<cmd> lua require('telescope.builtin').diagnostics({bufnr=0}) <CR>", "list diagnostic"}
   },
 }
 
