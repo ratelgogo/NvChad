@@ -147,10 +147,10 @@ local plugins = {
     "filNaj/tree-setter",
     event = "VeryLazy",
   },
-  {
-    "mfussenegger/nvim-dap",
-    event = "VeryLazy",
-  },
+  -- {
+  --   "mfussenegger/nvim-dap",
+  --   event = "VeryLazy",
+  -- },
   {
     "mfussenegger/nvim-jdtls",
   },
