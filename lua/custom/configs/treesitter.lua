@@ -1,6 +1,9 @@
 local configs = require "nvim-treesitter.configs"
 
 configs.setup {
+  tree_setter = {
+    enable = true,
+  },
   textobjects = {
     select = {
       enable = true,

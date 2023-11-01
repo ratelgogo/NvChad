@@ -139,6 +139,18 @@ local plugins = {
       require "custom.configs.lint"
     end,
   },
+  {
+    "filNaj/tree-setter",
+    event = "VeryLazy",
+  },
+  {
+    "mfussenegger/nvim-dap",
+    event = "VeryLazy",
+  },
+  {
+    "mfussenegger/nvim-jdtls",
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
