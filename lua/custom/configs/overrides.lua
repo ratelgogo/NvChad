@@ -59,7 +59,11 @@ M.nvimtree = {
   },
 }
 
-M.telescope = {}
+M.telescope = {
+  defaults = {
+    wrap_line = true,
+  },
+}
 
 M.comment = {
   -- Lines to be ignored while (un)comment

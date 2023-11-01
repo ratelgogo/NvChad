@@ -22,22 +22,25 @@ M.disabled = {
     ["<leader>wa"] = "",
     ["<leader>wr"] = "",
     ["<leader>wl"] = "",
+    ["<leaner>e"] = "",
   },
 }
 M.custom = {
   n = {
     ["<C-q>"] = { "<cmd>qall!<CR>", "exit without save" },
     ["<leader>gg"] = { "<cmd> LazyGit<CR>", "show LazyGit UI" },
+    ["<leader>e"] = { "<cmd>lua vim.diagnostic.open_float()<cr>", "show line diagnostics"},
   },
   i = {
     ["<C-s>"] = { "<ESC><cmd> w <CR>", "Save file" },
+    ["<leader>e"] = { "<ESC><cmd>lua vim.diagnostic.open_float()<cr>", "show line diagnostics"},
   },
 }
 
 M.telescope = {
   n = {
     ["<leader>fp"] = { "<cmd> lua require('telescope').extensions.project.project{} <CR>", "list projects" },
-    ["<leader>fd"] = { "<cmd> lua require('telescope.builtin').diagnostics({bufnr=0}) <CR>", "list diagnostic"}
+    ["<leader>fd"] = { "<cmd> lua require('telescope.builtin').diagnostics({bufnr=0, line_width='full'}) <CR>", "list diagnostic"}
   },
 }
 
