@@ -63,6 +63,7 @@ M.nvimtree = {
 M.telescope = {
   defaults = {
     wrap_line = true,
+    prompt_prefix = " 🔍 ",
   },
 }
 
