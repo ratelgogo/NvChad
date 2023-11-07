@@ -28,18 +28,28 @@ M.custom = {
   n = {
     ["<C-q>"] = { "<cmd>qall!<CR>", "exit without save" },
     ["<leader>gg"] = { "<cmd> LazyGit<CR>", "show LazyGit UI" },
-    ["<leader>e"] = { "<cmd>lua vim.diagnostic.open_float()<cr>", "show line diagnostics"},
+    ["<leader>e"] = { "<cmd>lua vim.diagnostic.open_float()<cr>", "show line diagnostics" },
   },
   i = {
     ["<C-s>"] = { "<ESC><cmd> w <CR>", "Save file" },
-    ["<leader>e"] = { "<ESC><cmd>lua vim.diagnostic.open_float()<cr>", "show line diagnostics"},
   },
 }
 
 M.telescope = {
   n = {
     ["<leader>fp"] = { "<cmd> lua require('telescope').extensions.project.project{} <CR>", "list projects" },
-    ["<leader>fd"] = { "<cmd> lua require('telescope.builtin').diagnostics({bufnr=0, line_width='full'}) <CR>", "list diagnostic"}
+    ["<leader>fd"] = {
+      "<cmd> lua require('telescope.builtin').diagnostics({bufnr=0, line_width='full'}) <CR>",
+      "list diagnostic",
+    },
+    ["<leader>fm"] = {
+      "<cmd> Telescope media_files<CR>",
+      "list all media_files",
+    },
+    ["<leader>fr"] = {
+      "<cmd> Telescope lsp_references<CR>",
+      "list references under the cursor",
+    },
   },
 }
 
@@ -67,15 +77,6 @@ M.lspconfig = {
       "<cmd>Lspsaga outline<CR>",
       "LSP outline",
     },
-    ["<leader>ls"] = {
-      "<Cmd>Lspsaga signature_help<CR>",
-      "LSP signature help",
-    },
-
-    ["<leader>D"] = {
-      "<cmd>Lspsaga finder tyd<CR>",
-      "LSP definition type",
-    },
 
     ["ga"] = {
       "<cmd>Lspsaga code_action<CR>",
@@ -95,13 +96,6 @@ M.lspconfig = {
     ["]d"] = {
       "<cmd>Lspsaga diagnostic_jump_next<CR>",
       "Goto next",
-    },
-
-    ["<leader>q"] = {
-      function()
-        vim.diagnostic.setloclist()
-      end,
-      "Diagnostic setloclist",
     },
   },
 

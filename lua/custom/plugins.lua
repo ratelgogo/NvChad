@@ -103,8 +103,19 @@ local plugins = {
   },
   {
     "nvim-telescope/telescope-project.nvim",
+    dependencies = "nvim-telescope/telescope.nvim",
     lazy = false,
     opt = true,
+    config = function()
+      require("telescope").load_extension "project"
+    end,
+  },
+  {
+    "nvim-telescope/telescope-media-files.nvim",
+    dependencies = "nvim-telescope/telescope.nvim",
+    config = function()
+      require("telescope").load_extension "media_files"
+    end,
   },
   {
     "kdheepak/lazygit.nvim",
