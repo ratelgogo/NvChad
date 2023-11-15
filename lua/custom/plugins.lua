@@ -91,6 +91,16 @@ local plugins = {
     end,
   },
   {
+    "NvChad/nvim-colorizer.lua",
+    opts = {
+      user_default_options = {
+        names = false,
+        RRGGBBAA = true,
+        css = true,
+      },
+    },
+  },
+  {
     "karb94/neoscroll.nvim",
     lazy = false,
     config = function()

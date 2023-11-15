@@ -39,13 +39,13 @@ vim.keymap.set("n", "<leader>m", function()
   end
 end)
 
-vim.api.nvim_exec(
-  [[
-augroup FormatAutogroup
-  autocmd!
-  autocmd BufWritePost *.js,*.tsx,*.lua,*.less,*.css,*.ts FormatWrite
-augroup END
-]],
-  true
-)
+-- vim.api.nvim_exec(
+--   [[
+-- augroup FormatAutogroup
+--   autocmd!
+--   autocmd BufWritePost *.js,*.tsx,*.lua,*.less,*.css,*.ts FormatWrite
+-- augroup END
+-- ]],
+--   true
+-- )
 return M
