@@ -11,6 +11,7 @@ vim.g.vscode_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/snippets/vs
 
 vim.opt.showbreak = "↳"
 vim.opt.wrap = true
+vim.opt.relativenumber = true
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,
